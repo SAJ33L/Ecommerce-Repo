@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Products</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/s2.css" type="text/css">
+  <link rel="stylesheet" href="../css/styleSheet.css" />
+
+  <style>
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      /* Adjust gap between cards as needed */
+      padding-left: 130px;
+    }
+
+    .card {
+      width: 300px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px 10px 0px 0px;
+    }
+  </style>
+
+</head>
+
+<body class="bgimg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand font-weight-bold"><i class="fas fa-tshirt"></i> Classy Creations</a>
+
+      <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+        <div class="navbar-nav  justify-items-stretch ">
+          <% if (true) { %>
+            <a class="nav-link active" aria-current="page" href="/logout">LOG OUT</a>
+            <% } else { %>
+              <a class="nav-link active" aria-current="page" href="login">LOGIN</a>
+              <% } %>
+
+                <a class="nav-link active" href="/product" tabindex="-1" aria-disabled="true">ITEM CATALOG</a>
+
+                <a class="nav-link" href="/" target="_self">HOME</a>
+                <a class="nav-link" href="about" tabindex="-1" aria-disabled="true">ABOUT US</a>
+                <% if (true) { %>
+                  <a class="nav-link" href="/product/admin" tabindex="-1" aria-disabled="true">Store</a>
+                  <% } %>
+
+        </div>
+      </div>
+  </nav>
+
+  <center>
+    <h2>Casuals: <br /></h2>
+  </center>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="images/watch.jpg" alt="Check URL" width="30px" height="300px" />
+      <h3>
+        <u>
+          <b>
+            <center>
+              <h2>
+                Tissot Originals
+              </h2>
+            </center>
+          </b>
+        </u>
+      </h3>
+      <center>
+        <p>
+          Price: 10000 Rs
+        </p>
+      </center>
+      <button onclick="location.href='/product/add-to-cart/Tissot Originals/10000'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="images\hoodie.jpg" alt="Check URL" width="30px" height="300px" />
+      <h3>
+        <u>
+          <b>
+            <center>
+              <h2>
+                Yellow Jacket
+              </h2>
+            </center>
+          </b>
+        </u>
+      </h3>
+      <center>
+        <p>
+          Price: 3500 Rs
+        </p>
+      </center>
+      <button onclick="location.href='/product/add-to-cart/Yellow Jacket/3500'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="images\bracelet.jpg" alt="Check URL" width="30px" height="300px" />
+      <h3>
+        <u>
+          <b>
+            <center>
+              <h2>
+                Blue Bump
+              </h2>
+            </center>
+          </b>
+        </u>
+      </h3>
+      <center>
+        <p>
+          Price: 5500 Rs
+        </p>
+      </center>
+      <button onclick="location.href='/product/add-to-cart/Blue Bump/500'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="images\jacket.jpg" alt="Check URL" width="30px" height="300px" />
+      <h3>
+        <u>
+          <b>
+            <center>
+              <h2>
+                Armani
+              </h2>
+            </center>
+          </b>
+        </u>
+      </h3>
+      <center>
+        <p>
+          Price: 8500 Rs
+        </p>
+      </center>
+      <button onclick="location.href='/product/add-to-cart/Armani/8500'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+    </div>
+</div>
+
+  <div class="cards-container">
+    <% products.forEach(product=> { %>
+      <div class="card">
+        <img src="images\j5.png" alt="Check URL" width="30px" height="300px" />
+        <h3>
+          <u>
+            <b>
+              <center>
+                <h2>
+                  <%= product.name %>
+                </h2>
+              </center>
+            </b>
+          </u>
+        </h3>
+        <center>
+          <p>
+            Price: <%= product.price %> Rs
+          </p>
+        </center>
+        <button onclick="location.href='/product/add-to-cart/<%= product.name %>/<%= product.price %>'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+      </div>
+      <% }) %>
+
+
+
+
+  </div>
+
+  <main>
+
+    <center>
+      <h2>Denim Wears: <br /></h2>
+    </center>
+
+    <div class="cards-container">
+        <div class="card">
+          <img src="images\im.jpeg" alt="Check URL" width="30px" height="300px" />
+          <h3>
+            <u>
+              <b>
+                <center>
+                  <h2>
+                    Denim Jeans
+                  </h2>
+                </center>
+              </b>
+            </u>
+          </h3>
+          <center>
+            <p>
+              Price: 2000 Rs
+            </p>
+          </center>
+          <button onclick="location.href='/product/add-to-cart/Denim Jeans/2000'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images\download.jpeg" alt="Check URL" width="30px" height="300px" />
+          <h3>
+            <u>
+              <b>
+                <center>
+                  <h2>
+                    Carrot Fit Jeans
+                  </h2>
+                </center>
+              </b>
+            </u>
+          </h3>
+          <center>
+            <p>
+              Price: 2500 Rs
+            </p>
+          </center>
+          <button onclick="location.href='/product/add-to-cart/Carrot Fit Jeans/2500'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images\jeans.jpg" alt="Check URL" width="30px" height="300px" />
+          <h3>
+            <u>
+              <b>
+                <center>
+                  <h2>
+                    Levis Blue
+                  </h2>
+                </center>
+              </b>
+            </u>
+          </h3>
+          <center>
+            <p>
+              Price: 4500 Rs
+            </p>
+          </center>
+          <button onclick="location.href='/product/add-to-cart/Levis Blue/4500'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images\images.jpeg" alt="Check URL" width="30px" height="300px" />
+          <h3>
+            <u>
+              <b>
+                <center>
+                  <h2>
+                    Tommy Great FItter
+                  </h2>
+                </center>
+              </b>
+            </u>
+          </h3>
+          <center>
+            <p>
+              Price: 4500 Rs
+            </p>
+          </center>
+          <button onclick="location.href='/product/add-to-cart/Tommy Great FItter/4200'" class="btn btn-primary btn-outline-light mt-2 " type="submit">Add to Cart</button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 align-items-center">
+          <form action="/cart" method="GET">
+            <button class="btn btn-dark btn-outline-light btn-lg mt-2">checkout</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section id="pricing" class="bg-light mt-5">
+      <div class="container-lg">
+        <div class="text-center">
+          <h2>PRODUCTS COMING</h2>
+          <p class="lead text-muted">SOON</p>
+        </div>
+
+        <div class="row my-5 align-items-center justify-content-center g-0">
+
+
+          <div class="col-8 col-lg-3">
+            <div class="card border-0 mb-3">
+              <!-- style="max-width: 18rem;"> -->
+              <div class="card-header"></div>
+              <div class="card-body text-dark text-center py-4">
+                <!-- <h5 class="card-title">Starter Edition</h5>
+           <p class="lead card-subtitle">E-book only</p> -->
+                <p class="display-5 my-5 text-primary fw-bold">Designer Jeans</p>
+
+                <p class="card-text mx-5 text-muted d-none d-lg-block ">
+                  These premium jeans will be directly imported from Italy</p>
+                <!-- <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a> -->
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 col-lg-4">
+            <div class="card border-primary mb-3">
+              <div class="card-header"></div>
+              <div class="card-body text-dark text-center py-4">
+                <!-- <h5 class="card-title">Popular Edition</h5>
+           <p class="lead card-subtitle">More Gadgets Available</p> -->
+                <p class="display-5 my-5 text-primary fw-bold">PREMIUM HOODIES</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">Wear premium hoodies that you deserve
+                </p>
+                <!-- <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-8 col-lg-3">
+            <div class="card border-0 mb-3">
+              <!-- style="max-width: 18rem;" -->
+
+              <div class="card-header"></div>
+              <div class="card-body text-dark text-center py-4">
+                <!-- <h5 class="card-title">Super Edition</h5>
+           <p class="lead card-subtitle">Save 40% with this 3-Months Plan</p> -->
+                <p class="display-5 my-5 text-primary fw-bold">Leather Jackets</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">Leather Jacket made from animal skin imported
+                  frrom Russia. COMING SOON </p>
+                <!-- <a href="#" class="btn btn-outline-primary btn-lg mt-3">Buy Now</a> -->
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </section>
+
+  </main>
+
+
+  <script>
+    function addToCart(name, rs) {
+      let price = Number(rs)
+      fetch('/product/add-to-cart', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, price })
+      })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function checkout() {
+      window.location.href = '/checkout';
+    }
+  </script>
+
+</body>
+
+</html>
