@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap");
+
+/* * {
+  border: 0.5px solid black;
+} */
+/*betterTo understand boxes*/
+
+.bgimg {
+  background-image: url("data:image/jpeg;base64,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");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 660px;
+
+  /* <img
+     src="images\download.png"
+     alt="Check URL"
+     width="100px"
+     height="100px"
+   /> */
+}
+
+.headerset {
+  padding-top: 200px;
+}
+.headerset h1 {
+  font-weight: bold;
+}
+.nav-link {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 15px;
+
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #f1f3f3;
+  position: absolute;
+  left: 0px;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.services {
+  padding: 100px 0px 60px;
+
+  background-color: azure;
+
+  height: 700px;
+}
+.services h1 {
+  font-weight: bold;
+}
+.iconset {
+  color: cadetblue;
+}
+.r1-set p {
+  color: dimgrey;
+}
+.portfolio {
+  background-color: aliceblue;
+  height: 1300px;
+}
+.card {
+  margin-top: 40px;
+}
+
+.img2 {
+  width: 100%;
+  height: 19vw;
+  object-fit: cover;
+}
+.ourteam {
+  height: 900px;
+}
+.r2 p {
+  color: darkgreen;
+}
+.r2 h4 {
+  font-weight: bold;
+  color: darkgreen;
+}
+.imm {
+  width: 100%;
+  height: 19vw;
+  object-fit: cover;
+}
+.ourteam {
+  padding-top: 50px;
+}
+.container {
+  font-family: "Quicksand";
+}
+h4 {
+  color: rgb(5, 5, 5);
+  font-weight: bold;
+}
+.icon-img {
+  width: 60px;
+  height: 60px;
+}
